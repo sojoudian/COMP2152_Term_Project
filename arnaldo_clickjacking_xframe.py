@@ -1,59 +1,49 @@
-# Author: Arnaldo 
-# Vulnerability: Missing X-Frame-Options Header 
+# Author: Arnaldo Neto
+# Vulnerability: Missing X-Frame-Options Header (Clickjacking)
 # Target: blog.0x10.cloud
+
 
 import urllib.request
 import time
 
-TARGET = "https://blog.0x10.cloud"
+# the site im testing
+url = "https://blog.0x10.cloud"
 
-print("=" * 55)
-print("Testing: Missing X-Frame-Options Header")
-print(f"Target: {TARGET}")
-print("=" * 55)
+print("checking security headers on", url)
+print("-" * 40)
 
 try:
-    # Send HTTP request to the target
-    response = urllib.request.urlopen(TARGET, timeout=5)
-
-    # Convert headers to dictionary
+    # open the url and get the response
+    response = urllib.request.urlopen(url, timeout=5)
     headers = dict(response.headers)
 
-    print(f"\nStatus: {response.status}")
-    print(f"Final URL: {response.url}")
+    print("status code:", response.status)
 
-    # Display relevant security headers
-    print("\n--- Security Headers Received ---")
-    security_headers = [
-        "X-Frame-Options",
-        "Content-Security-Policy",
-        "Strict-Transport-Security",
-        "X-Content-Type-Options",
-    ]
-    for h in security_headers:
-        value = headers.get(h, "MISSING ⚠️")
-        print(f"  {h}: {value}")
+    # i want to check if X-Frame-Options is there
+    xframe = headers.get("X-Frame-Options")
 
-    # Check if X-Frame-Options is missing
-    xframe = headers.get("X-Frame-Options", None)
+    # also checking these ones just to see
+    csp = headers.get("Content-Security-Policy")
+    sts = headers.get("Strict-Transport-Security")
 
-    print("\n--- Result ---")
+    print("\nheaders i found:")
+    print("  X-Frame-Options:", xframe if xframe else "not found")
+    print("  Content-Security-Policy:", csp if csp else "not found")
+    print("  Strict-Transport-Security:", sts if sts else "not found")
+
+    # if xframe is missing that means the site can be put inside an iframe
+    # this is bad because attackers can trick users into clicking things
+    # its called clickjacking
     if xframe is None:
-        print("\n VULNERABILITY FOUND: Missing X-Frame-Options Header!")
-        print("   The server does not return the X-Frame-Options header.")
-        print("   This allows the page to be embedded inside an <iframe>")
-        print("   on any malicious website.")
-        print("   Risk: Clickjacking — an attacker can overlay the site")
-        print("   with invisible layers, tricking users into clicking")
-        print("   unintended actions (e.g. transfers, account changes).")
+        print("\nVULNERABILITY: X-Frame-Options header is missing!")
+        print("this means the page can be loaded inside an iframe on another site")
+        print("an attacker could use this to trick users into clicking stuff they didnt mean to")
     else:
-        print(f"\n X-Frame-Options present: {xframe}")
-        print("   Site is protected against Clickjacking.")
+        print("\nok the header is there, site looks fine")
+
+    # small delay so i dont hit the rate limit
+    time.sleep(0.15)
 
 except Exception as e:
-    print(f"\n Connection error: {e}")
-
-time.sleep(0.15)
-print("\n" + "=" * 55)
-print("Test complete.")
-print("=" * 55)
+    # something went wrong
+    print("error:", e)
