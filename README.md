@@ -1,24 +1,20 @@
 # COMP2152 — Term Project: CTF Bug Bounty
 
 ## Team Name
-<!-- Replace with your team name -->
-Team _______
+
+BytePatrol-COMP2152
 
 ## Team Members
 
 | Member | Vulnerability Found | Branch Name |
 |--------|-------------------|-------------|
-| _______ | _______ | _______ |
-| _______ | _______ | _______ |
-| _______ | _______ | _______ |
+| bgirmadessalegn | Anonymous FTP + version banner on non-standard port | bgirmadessalegn_ftp_anonymous |
 
 ## Videos
 
-Each team member records a short video (max 3 minutes) explaining their vulnerability. Add your YouTube links below:
+Short video (max 3 minutes) per the assignment — add your YouTube link when it is uploaded:
 
-- Member 1: https://youtube.com/watch?v=_______
-- Member 2: https://youtube.com/watch?v=_______
-- Member 3: https://youtube.com/watch?v=_______
+- bgirmadessalegn: https://youtube.com/watch?v=_______
 
 ## Target
 
@@ -41,11 +37,8 @@ time.sleep(0.15)  # wait 150ms between requests
    - `example_http_check.py` — checks if a site uses HTTPS (uses `urllib`)
    - `example_port_check.py` — checks if a port is open (uses `socket`)
    - `example_header_check.py` — reads HTTP response headers for info leaks (uses `urllib`)
-2. Run all examples: `python3 main.py`
-3. Create your own branch: `git checkout -b your_vuln_name`
-4. Write a Python script that finds and demonstrates a vulnerability
-5. Submit your finding at http://submit.0x10.cloud
-6. Merge your branch into master when done
+2. Run examples + this PoC: `python3 main.py`, or only your script: `python3 bgirmadessalegn_ftp_anonymous.py`
+3. Submit your finding at http://submit.0x10.cloud (use script output or code as proof)
 
 ## Rules
 
