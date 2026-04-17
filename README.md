@@ -17,7 +17,7 @@ securecoders2152
 
 - Alia: https://youtube.com/watch?v=________
 - Aaron: https://youtube.com/watch?v=________
-- Camille: https://youtube.com/watch?v=________
+- Camille: https://youtu.be/A2-gkCTeq-Q?feature=shared
 - Enna: https://youtube.com/watch?v=________
 - Fabiha: https://youtube.com/watch?v=________
 
