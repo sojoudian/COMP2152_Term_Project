@@ -30,7 +30,7 @@ def check_headers(url):
         print(f"Error: {e}")
 
 def main():
-    target = "http://jenkins.0x10.cloud"
+    target = "http://api.0x10.cloud"
     check_headers(target)
 
 if __name__ == "__main__":
