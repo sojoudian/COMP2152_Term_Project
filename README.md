@@ -12,7 +12,7 @@ Team 0x10-jar-of-flies
 | Member           | Vulnerability Found              | Branch Name        |
 | ---------------- | -------------------------------- | ------------------ |
 | Blossom Babalola | No HTTPS redirect + missing HSTS | blossom_http_check |
-| _______          | _______                          | _______            |
+| Akinwunmi Eludoyin | Exposed backup file accessible without authentication | akin_backup_check |
 | _______          | _______                          | _______            |
 
 
@@ -21,7 +21,7 @@ Team 0x10-jar-of-flies
 Each team member records a short video (max 3 minutes) explaining their vulnerability. Add your YouTube links below:
 
 - Member 1: [https://youtu.be/3ORQ10fd04w](https://youtu.be/3ORQ10fd04w)
-- Member 2: 
+- Member 2: (Akinwunmi Eludoyin)
 - Member 3: 
 
 ## Target
