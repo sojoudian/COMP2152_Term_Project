@@ -2,14 +2,14 @@
 
 ## Team Name
 <!-- Replace with your team name -->
-Team _______
+Team __Vector Security_____
 
 ## Team Members
 
 | Member | Vulnerability Found | Branch Name |
 |--------|-------------------|-------------|
-| _______ | _______ | _______ |
-| _______ | _______ | _______ |
+| 101577629| Telnet Exposed on Port 2323 | tommy_telnet_vulnerability|
+| Hasan Khalil (101466121) | Blog over HTTP (No HTTPS Enforcement) | hasankhalil_http_vulnerability |
 | _______ | _______ | _______ |
 
 ## Videos
