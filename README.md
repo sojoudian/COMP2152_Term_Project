@@ -1,16 +1,15 @@
 # COMP2152 — Term Project: CTF Bug Bounty
 
 ## Team Name
-<!-- Replace with your team name -->
-Team _______
+GroupKRAP
 
 ## Team Members
 
 | Member | Vulnerability Found | Branch Name |
 |--------|-------------------|-------------|
-| _______ | _______ | _______ |
-| _______ | _______ | _______ |
-| _______ | _______ | _______ |
+|Kerem Bas  | DOR /users?id=X on api.0x10.cloud | kerem_idor_users |
+|Rasul Dadashbayli | Exposed .env file on files.0x10.cloud | rasul_env_exposed  |
+|Alikhan Zhilkibayev| Deprecated TLS 1.0 on old.0x10.cloud | alikhan_deprecated_tls |
 
 ## Videos
 
