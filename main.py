@@ -1,7 +1,6 @@
-# ============================================================
+
 #  COMP2152 — Term Project: CTF Bug Bounty
 #  Main Runner — Runs all vulnerability check scripts
-# ============================================================
 
 import subprocess
 import sys
@@ -11,6 +10,11 @@ scripts = [
     "example_http_check.py",
     "example_port_check.py",
     "example_header_check.py",
+    #  our scripts
+    "rasul_env_exposed.py",
+    "kerem_idor_users.py",
+    "alikhan_deprecated_tls.py",
+    
 ]
 
 if __name__ == "__main__":
