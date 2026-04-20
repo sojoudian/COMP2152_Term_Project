@@ -1,24 +1,23 @@
 # COMP2152 — Term Project: CTF Bug Bounty
 
 ## Team Name
-<!-- Replace with your team name -->
-Team _______
+
+Team : BytePatrol
 
 ## Team Members
 
 | Member | Vulnerability Found | Branch Name |
-|--------|-------------------|-------------|
-| _______ | _______ | _______ |
-| _______ | _______ | _______ |
-| _______ | _______ | _______ |
+
+| Garv | Unauthenticated Redis Access + Info Disclosure | garv_redis_exposure |
+
+| Bruck Dessalegn | Anonymous FTP login + banner leak | bgirmadessalegn_ftp_anonymous |
 
 ## Videos
 
 Each team member records a short video (max 3 minutes) explaining their vulnerability. Add your YouTube links below:
 
-- Member 1: https://youtube.com/watch?v=_______
-- Member 2: https://youtube.com/watch?v=_______
-- Member 3: https://youtube.com/watch?v=_______
+- Member 1: https://youtu.be/_A08PNwLXC8
+- Member 2: https://youtu.be/nbWGnHsdxdg
 
 ## Target
 
