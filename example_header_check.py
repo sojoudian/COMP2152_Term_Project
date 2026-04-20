@@ -25,7 +25,7 @@ print("=" * 50)
 
 # --- Check 1: Server version disclosure ---
 
-target = "http://api.0x10.cloud"
+target = "http://webhook.0x10.cloud"
 print(f"\n  [1] Checking {target} for server version leak...")
 
 try:

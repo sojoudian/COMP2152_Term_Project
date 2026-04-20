@@ -19,8 +19,9 @@
 
 import socket
 
-target = "telnet.0x10.cloud"
-port = 2323
+target = "api.0x10.cloud"
+port = 2525
+
 
 print("=" * 50)
 print("  Open Port Check (Telnet)")
